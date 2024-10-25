@@ -1,0 +1,20 @@
+header{
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapheader h1 {
+    margin: 30px;
+}
+
+.wrapheader ul {
+    display: flex;
+    align-items: center;
+}
+
+.wrapheader li {
+    margin: 20px;
+    list-style-type: none;
+    font-size: 20px;
+    cursor: pointer;
+}
