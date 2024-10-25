@@ -7,14 +7,27 @@ header{
     margin: 30px;
 }
 
-.wrapheader ul {
-    display: flex;
-    align-items: center;
+
+.sectiondestacados h1{
+    text-align: center;
+    margin: 50px;
 }
 
-.wrapheader li {
+.wrappermain h1 {
+    text-align: start;
+    margin: 50px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
     margin: 20px;
-    list-style-type: none;
-    font-size: 20px;
-    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.botones button {
+    background-color: transparent;
+    padding: 10px 20px;
+    border-color: transparent;
+    color: #000000;
 }

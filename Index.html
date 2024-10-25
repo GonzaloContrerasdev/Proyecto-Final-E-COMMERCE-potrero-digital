@@ -12,13 +12,21 @@
 <body>
     <header class="wrapheader">
         <h1>Game To-Do</h1>
-        <ul>
-            <li>Login</li>
-            <li>Register</li>
+        <div class="botones">
+        <button>Login</button>
+        <button>Register</button>
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Switch
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Dark</a></li>
+          <li><a class="dropdown-item" href="#">White</a></li>
+          <li><a class="dropdown-item" href="#">rdn</a></li>
         </ul>
+      </div>
     </header>
-    <nav class="navbar navbar-expand-lg bg-body">
-        <div class="container-fluid mx-2 my-2 z-1 ">
+    <nav class="navbar navbar-expand-lg bg-white z-1">
+        <div class="container-fluid mx-2 my-2">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -37,7 +45,6 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Combo 1</a></li>
                   <li><a class="dropdown-item" href="#">Combo 2</a></li>
-                  <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Combo 3</a></li>
                 </ul>
               </li>
@@ -55,11 +62,11 @@
       <section>
         <div id="carouselExampleIndicators" class="carousel slide">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -80,13 +87,22 @@
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">Anterior</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">Siguiente</span>
           </button>
         </div>
       </section>
+      <section class="sectiondestacados">
+        <h1>Destacados Del Dia!!</h1>
+          
+        </section>
+        <main class="wrappermain">
+          <h1 id="scrollspyHeading1">Productos</h1>
+          <section class="container"></section>
+          
+        </main>
 </body>
 </html>
