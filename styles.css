@@ -1,0 +1,5 @@
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15% !important;  /* Este es el valor por defecto de $carousel-control-width */
+    /* Puedes ajustar este valor según necesites */
+} 
