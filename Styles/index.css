@@ -66,7 +66,9 @@
   --bs-body-bg: #fff;
   --bs-border-color: #dee2e6;
 }
-
+*{
+  scroll-behavior: smooth;
+}
 .product-card {
     position: relative;
     overflow: hidden;
@@ -156,3 +158,11 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+.category-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
