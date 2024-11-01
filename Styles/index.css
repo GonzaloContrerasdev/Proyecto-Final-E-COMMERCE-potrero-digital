@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Itim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Tiny5&display=swap');
 :root,
 :root[data-bs-theme="light"] {
   --bs-body-color: #4361ee;
   --bs-body-bg: #fffff3;
   --bs-border-color: #dee2e6;
-  
+  --bs-letra-font-family: "Roboto Mono", monospace;
 }
 
 :root[data-bs-theme="dark"] {
@@ -58,15 +59,24 @@
     --bs-form-valid-border-color: #9dd49d;
     --bs-form-invalid-color: #e89895;
     --bs-form-invalid-border-color: #e89895;
+    --bs-letra-font-family: "Itim", cursive;
+    --bs-body-font-weight:400;
+    --bs-body-font-style:normal;
 }
 
-:root[data-bs-theme="sketchy"]{
-  --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+:root[data-bs-theme="gamer"]{
+  --bs-body-color: #38b000;
+  --bs-body-bg: #000814;
   --bs-border-color: #dee2e6;
+  --bs-letra-font-family:"Tiny5", sans-serif;
+  --bs-body-font-weight:700;
+  --bs-body-font-style:normal;
 }
 *{
   scroll-behavior: smooth;
+  font-family: var(--bs-letra-font-family);
+  font-weight: var(--bs-body-font-weight);
+  font-style:var(--bs-body-font-style);
 }
 .cartaproducto {
     position: relative;
@@ -101,17 +111,18 @@
   }
 
   .image-product {
-    height: 300px;  /* Altura fija para las imágenes de productos */
-    width: 100%;    /* Ancho completo */
-    object-fit: contain;  /* Mantiene la proporción original */
-    background-color: #f8f9fa;  /* Fondo para las áreas vacías */
-    padding: 10px;  /* Espacio alrededor de la imagen */
+    height: 300px;
+    width: 100%;
+    object-fit: contain;
+    background-color: var(--bs-body-bg);
+    padding: 10px;
   } 
 
 .cta {
   border: none;
   background: none;
   cursor: pointer;
+  color: var(--bs-body-color);
 }
 
 .cta span {
@@ -120,24 +131,29 @@
   font-size: 14px;
   padding-right: 15px;
   text-transform: uppercase;
+  color: var(--bs-body-color);
 }
 
 .cta svg {
   transform: translateX(-8px);
   transition: all 0.3s ease;
+  color: var(--bs-body-color);
 }
 
 .cta:hover svg {
   transform: translateX(0);
+  color: var(--bs-body-color);
 }
 
 .cta:active svg {
   transform: scale(0.9);
+  color: var(--bs-body-color);
 }
 
 .hover-underline-animation {
   position: relative;
   padding-bottom: 20px;
+  color: var(--bs-body-color);
 }
 
 .hover-underline-animation:after {
@@ -148,14 +164,17 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000000;
+  background-color: var(--bs-body-color);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
+  color: var(--bs-body-color);
 }
 
 .cta:hover .hover-underline-animation:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+  background-color: var(--bs-body-color);
+  color: var(--bs-body-color);
 }
 
 .category-card {
@@ -165,3 +184,7 @@
   padding: 1.5rem;
 }
 
+.cta svg{
+color: var(--bs-body-color);
+  fill: currentColor;
+}
