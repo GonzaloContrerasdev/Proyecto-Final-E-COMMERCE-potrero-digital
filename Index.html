@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="light">
-  <head>
+<html lang="es" data-bs-theme="ligcartaproducto
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./Styles/index.css" />
@@ -27,6 +26,8 @@
       crossorigin="anonymous"
     />
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/cart.js"></script>
+    <script src="./scripts/filter-sort.js"></script>
     <title>Game To-Do</title>
     <meta
       name="description"
@@ -114,17 +115,23 @@
               <a class="nav-link" aria-disabled="true" href="#">Ofertas</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
+          <form class="d-flex" role="search" id="searchForm">
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Buscar"
+              placeholder="Buscar productos"
               aria-label="Buscar"
+              id="searchInput"
             />
             <button class="btn btn-outline-success" type="submit">
-              Search
+              Buscar
             </button>
           </form>
+          <div class="ms-auto">
+            <button class="btn btn-outline-primary" id="cart-button">
+              <i class="bi bi-cart"></i> <span id="cart-count">0</span>
+            </button>
+          </div>
         </div>
       </div>
     </nav>
@@ -294,7 +301,7 @@
             <div class="carousel-item active">
               <div class="row">
                 <div class="col-12 col-sm-6 col-md-4 mb-4">
-                  <div class="card product-card">
+                  <div class="card cartaproducto">
                     <img
                       src="./Assets/dualshockPs4.webp"
                       class="card-img-top product-image"
@@ -313,7 +320,7 @@
                   </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 mb-4">
-                  <div class="card product-card">
+                  <div class="card cartaproducto">
                     <img
                       src="./Assets/Smartwatch.webp"
                       class="card-img-top product-image"
@@ -331,7 +338,7 @@
                   </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 mb-4">
-                  <div class="card product-card">
+                  <div class="card cartaproducto">
                     <img
                       src="/Assets/Airpods.webp"
                       class="card-img-top product-image"
@@ -355,7 +362,7 @@
             <div class="carousel-item">
               <div class="row">
                 <div class="col-12 col-sm-6 col-md-4 mb-4">
-                  <div class="card product-card">
+                  <div class="card cartaproducto">
                     <img
                       src="/Assets/ipad2.webp"
                       class="card-img-top product-image"
@@ -373,7 +380,7 @@
                   </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 mb-4">
-                  <div class="card product-card">
+                  <div class="card cartaproducto">
                     <img
                       src="/Assets/laptop.webp"
                       class="card-img-top product-image"
@@ -391,7 +398,7 @@
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <div class="card product-card">
+                  <div class="card cartaproducto">
                     <img
                       src="/Assets/monitor.webp"
                       class="card-img-top product-image"
@@ -525,7 +532,7 @@
       </div>
 
       <section class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="products-container">
           <div class="col">
             <div class="card">
               <img
@@ -551,7 +558,12 @@
                     <span>(4.0)</span>
                   </div>
                 </div>
-                <button class="btn btn-primary w-100 mb-2">
+                <button
+                  class="btn btn-primary w-100 mb-2 add-to-cart"
+                  data-id="1"
+                  data-name="Joystick Ps4"
+                  data-price="70.99"
+                >
                   Agregar al carrito
                 </button>
                 <button class="cta">
@@ -590,7 +602,7 @@
                   una sola carga.
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <p class="fw-bold fs-3">$159.99</p>
+                  <p class="fw-bold fs-3">$20</p>
                   <div class="rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -600,9 +612,14 @@
                     <span>(4.5)</span>
                   </div>
                 </div>
-                <button class="btn btn-primary w-100 mb-2">
-                  Agregar al carrito
-                </button>
+                <button
+                class="btn btn-primary w-100 mb-2 add-to-cart"
+                data-id="2"
+                data-name="Airpods"
+                data-price="20.00"
+              >
+                Agregar al carrito
+              </button>
                 <button class="cta">
                   <span class="hover-underline-animation"> Ver detalles </span>
                   <svg
@@ -648,7 +665,12 @@
                     <span>(5.0)</span>
                   </div>
                 </div>
-                <button class="btn btn-primary w-100 mb-2">
+                <button
+                  class="btn btn-primary w-100 mb-2 add-to-cart"
+                  data-id="3"
+                  data-name="Ipad"
+                  data-price="329.99"
+                >
                   Agregar al carrito
                 </button>
                 <button class="cta">
@@ -696,7 +718,224 @@
                     <span>(4.2)</span>
                   </div>
                 </div>
-                <button class="btn btn-primary w-100 mb-2">
+                <button
+                  class="btn btn-primary w-100 mb-2 add-to-cart"
+                  data-id="4"
+                  data-name="Laptop"
+                  data-price="899.99"
+                >
+                  Agregar al carrito
+                </button>
+                <button class="cta">
+                  <span class="hover-underline-animation"> Ver detalles </span>
+                  <svg
+                    id="arrow-horizontal"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="10"
+                    viewBox="0 0 46 16"
+                  >
+                    <path
+                      id="Path_10"
+                      data-name="Path 10"
+                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                      transform="translate(30)"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="./Assets/ipad1.webp"
+                class="card-img-top image-product"
+                alt="Laptop"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ipad Pro</h5>
+                <p class="card-text">
+                  Mantente productivo en movimiento con este elegante ultrabook.
+                  Cuenta con un potente procesador, larga duración de batería y
+                  un diseño ligero para una portabilidad óptima.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="fw-bold fs-3">$300.99</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(4.2)</span>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary w-100 mb-2 add-to-cart"
+                  data-id="5"
+                  data-name="ipad"
+                  data-price="300.99"
+                >
+                  Agregar al carrito
+                </button>
+                <button class="cta">
+                  <span class="hover-underline-animation"> Ver detalles </span>
+                  <svg
+                    id="arrow-horizontal"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="10"
+                    viewBox="0 0 46 16"
+                  >
+                    <path
+                      id="Path_10"
+                      data-name="Path 10"
+                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                      transform="translate(30)"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="./Assets/Smartwatch.webp"
+                class="card-img-top image-product"
+                alt="Laptop"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Smartwatch</h5>
+                <p class="card-text">
+                  Mantente productivo en movimiento con este elegante ultrabook.
+                  Cuenta con un potente procesador, larga duración de batería y
+                  un diseño ligero para una portabilidad óptima.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="fw-bold fs-3">$50.99</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(4.2)</span>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary w-100 mb-2 add-to-cart"
+                  data-id="6"
+                  data-name="Smartwatch"
+                  data-price="50.99"
+                >
+                  Agregar al carrito
+                </button>
+                <button class="cta">
+                  <span class="hover-underline-animation"> Ver detalles </span>
+                  <svg
+                    id="arrow-horizontal"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="10"
+                    viewBox="0 0 46 16"
+                  >
+                    <path
+                      id="Path_10"
+                      data-name="Path 10"
+                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                      transform="translate(30)"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="./Assets/monitor.webp"
+                class="card-img-top image-product"
+                alt="Laptop"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Monitor</h5>
+                <p class="card-text">
+                  Mantente productivo en movimiento con este elegante ultrabook.
+                  Cuenta con un potente procesador, larga duración de batería y
+                  un diseño ligero para una portabilidad óptima.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="fw-bold fs-3">$899.99</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(4.2)</span>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary w-100 mb-2 add-to-cart"
+                  data-id="7"
+                  data-name="Monitor"
+                  data-price="370.99"
+                >
+                  Agregar al carrito
+                </button>
+                <button class="cta">
+                  <span class="hover-underline-animation"> Ver detalles </span>
+                  <svg
+                    id="arrow-horizontal"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="10"
+                    viewBox="0 0 46 16"
+                  >
+                    <path
+                      id="Path_10"
+                      data-name="Path 10"
+                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                      transform="translate(30)"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card product-card" data-category="gaming" data-price="299.99" data-rating="4.5">
+              <img
+                src="./Assets/xboxjoystick.jpg"
+                class="card-img-top image-product"
+                alt="Laptop"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dualshock Xbox</h5>
+                <p class="card-text">
+                  Mantente productivo en movimiento con este elegante ultrabook.
+                  Cuenta con un potente procesador, larga duración de batería y
+                  un diseño ligero para una portabilidad óptima.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="fw-bold fs-3">$70.99</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(4.2)</span>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary w-100 mb-2 add-to-cart"
+                  data-id="8"
+                  data-name="Dualshock Xbox"
+                  data-price="70.99"
+                >
                   Agregar al carrito
                 </button>
                 <button class="cta">
@@ -728,9 +967,9 @@
       <div class="row g-4">
         <!-- Producto Relacionado 1 -->
         <div class="col-12 col-sm-6 col-md-3">
-          <div class="card product-card h-100">
+          <div class="card productcard h-100">
             <img
-              src="./Assets/headphones.webp"
+              src="./Assets/auriculares.jpg"
               class="card-img-top product-image"
               alt="Auriculares Gaming"
             />
@@ -761,7 +1000,7 @@
 
         <!-- Producto Relacionado 2 -->
         <div class="col-12 col-sm-6 col-md-3">
-          <div class="card product-card h-100">
+          <div class="card productcard h-100">
             <img
               src="./Assets/mousepad.webp"
               class="card-img-top product-image"
@@ -794,9 +1033,9 @@
 
         <!-- Producto Relacionado 3 -->
         <div class="col-12 col-sm-6 col-md-3">
-          <div class="card product-card h-100">
+          <div class="card productcard h-100">
             <img
-              src="./Assets/webcam.webp"
+              src="./Assets/camera.webp"
               class="card-img-top product-image"
               alt="Webcam HD"
             />
@@ -827,9 +1066,9 @@
 
         <!-- Producto Relacionado 4 -->
         <div class="col-12 col-sm-6 col-md-3">
-          <div class="card product-card h-100">
+          <div class="card productcard h-100">
             <img
-              src="./Assets/keyboard.webp"
+              src="./Assets/teclado.jpg"
               class="card-img-top product-image"
               alt="Teclado Mecánico"
             />
@@ -990,6 +1229,43 @@
     >
       <i class="bi bi-arrow-up"></i>
     </button>
+    <!-- Modal del Carrito -->
+    <div
+      class="modal fade"
+      id="cartModal"
+      tabindex="-1"
+      aria-labelledby="cartModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="cart-items">
+            <!-- Aquí se mostrarán los items del carrito -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary" id="checkout-button">
+              Proceder al pago
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- SCRIPTS-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

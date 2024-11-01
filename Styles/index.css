@@ -1,15 +1,15 @@
 :root,
 :root[data-bs-theme="light"] {
-  --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-color: #4361ee;
+  --bs-body-bg: #fffff3;
   --bs-border-color: #dee2e6;
   
 }
 
 :root[data-bs-theme="dark"] {
     --bs-body-color: #ced4da;
-    --bs-body-color-rgb: 206, 212, 218;
-    --bs-body-bg: #212529;
+    --bs-body-color: #90e0ef;
+    --bs-body-bg: #000814;
     --bs-body-bg-rgb: 33, 37, 41;
     --bs-emphasis-color: #fff;
     --bs-emphasis-color-rgb: 255, 255, 255;
@@ -69,7 +69,7 @@
 *{
   scroll-behavior: smooth;
 }
-.product-card {
+.cartaproducto {
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -92,7 +92,7 @@
     padding: 1rem;
   }
 
-  .product-card:hover .product-overlay {
+  .cartaproducto:hover .product-overlay {
     opacity: 1;
   }
 
