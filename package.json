@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "get-google-fonts": "^1.2.2",
     "node": "^22.10.0",

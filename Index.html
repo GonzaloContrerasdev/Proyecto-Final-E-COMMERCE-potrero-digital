@@ -26,11 +26,22 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="icon" type="image/webp" sizes="32x32" href="./Assets/Logo.webp">
+    <link rel="icon" type="image/webp" sizes="16x16" href="./Assets/Logo.webp">
+    <link rel="apple-touch-icon" sizes="180x180"    href="./Assets/Logo.webp">
     <script src="./scripts/index.js"></script>
     <script src="./scripts/cart.js"></script>
     <script src="./scripts/filter-sort.js"></script>
 
-    <title>Game To-Do</title>
+    <title>ElectroHub</title>
+    <meta
+      name="author"
+      content="Gonzalo Contreras"
+    />
     <meta
       name="description"
       content="Tu tienda de confianza para productos tecnológicos y gaming."
@@ -38,11 +49,11 @@
     <meta name="keywords" content="tecnología, gaming, productos, tienda, tienda gaming, ps4" />
   </head>
   <body>
-    <!-- Header-->
+    <!-- Encabezado -->
     <header
-      class="d-flex justify-content-between align-items-center p-3 bg-body-tertiary position-relative"
+      class="d-flex justify-content-between align-items-center p-3 position-relative"
       style="z-index: 1030">
-      <h1 class="m-0">Game To-Do</h1>
+      <h1 class="m-0 animate__animated animate__lightSpeedInLeft  ">ElectroHub</h1>
       <div class="d-flex align-items-center">
         <div class="dropdown">
           <button
@@ -55,16 +66,16 @@
           </button>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" href="#" data-theme="light">Light</a>
+              <a class="dropdown-item" href="#" data-theme="light">Claro</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#" data-theme="dark">Dark</a>
+              <a class="dropdown-item" href="#" data-theme="dark">Oscuro</a>
             </li>
             <li>
               <a class="dropdown-item" href="#" data-theme="gamer">Gamer</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#" data-theme="slate">Slate</a>
+              <a class="dropdown-item" href="#" data-theme="slate">Pizarra</a>
             </li>
             <li>
               <a class="dropdown-item" href="#" data-theme="solar">Solar</a>
@@ -74,9 +85,9 @@
       </div>
     </header>
 
-    <!-- navbar-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
-      <div class="container-fluid mx-2 my-2">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm d-flex ">
+      <div class="container-fluid my-2">
         <button
           class="navbar-toggler"
           type="button"
@@ -88,9 +99,12 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <a class="navbar-brand" href="#">
+            <img src="./Assets/Logo.webp" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          </a>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link" aria-current="page" href="#">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#scrollspyHeading1">Productos</a>
@@ -135,7 +149,7 @@
         </div>
       </div>
     </nav>
-    <!-- carousel Principal de la pagina-->
+    <!-- Carrusel principal de la página -->
     <section>
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
@@ -145,31 +159,31 @@
             data-bs-slide-to="0"
             class="active"
             aria-current="true"
-            aria-label="Slide 1"
+            aria-label="Diapositiva 1"
           ></button>
           <button
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="1"
-            aria-label="Slide 2"
+            aria-label="Diapositiva 2"
           ></button>
           <button
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="2"
-            aria-label="Slide 3"
+            aria-label="Diapositiva 3"
           ></button>
           <button
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="3"
-            aria-label="Slide 4"
+            aria-label="Diapositiva 4"
           ></button>
           <button
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="4"
-            aria-label="Slide 5"
+            aria-label="Diapositiva 5"
           ></button>
         </div>
         <div class="carousel-inner">
@@ -177,7 +191,7 @@
             <img
               src="./Assets/1.webp"
               class="d-block w-100"
-              alt="Image Not Found"
+              alt="Imagen no encontrada"
               loading="lazy"
             />
           </div>
@@ -185,7 +199,7 @@
             <img
               src="./Assets/2.webp"
               class="d-block w-100"
-              alt="Image Not Found"
+              alt="Imagen no encontrada"
               loading="lazy"
             />
           </div>
@@ -193,7 +207,7 @@
             <img
               src="./Assets/3.webp"
               class="d-block w-100"
-              alt="Image Not Found"
+              alt="Imagen no encontrada"
               loading="lazy"
             />
           </div>
@@ -201,7 +215,7 @@
             <img
               src="./Assets/4.webp"
               class="d-block w-100"
-              alt="Image Not Found"
+              alt="Imagen no encontrada"
               loading="lazy"
             />
           </div>
@@ -209,7 +223,7 @@
             <img
               src="./Assets/5.webp"
               class="d-block w-100"
-              alt="Image Not Found"
+              alt="Imagen no encontrada"
               loading="lazy"
             />
           </div>
@@ -234,7 +248,7 @@
         </button>
       </div>
     </section>
-    <!-- Seccion de categorias principales-->
+    <!-- Sección de categorías principales -->
     <section class="container my-5">
       <h2 class="text-center mb-4">Categorías Principales</h2>
       <div class="row g-4">
@@ -268,7 +282,7 @@
         </div>
       </div>
     </section>
-    <!-- Seccion de ofertas especiales-->
+    <!-- Sección de ofertas especiales -->
     <section class="bg-primary text-white py-4 my-5">
       <div class="container">
         <div class="row align-items-center">
@@ -285,9 +299,9 @@
         </div>
       </div>
     </section>
-    <!-- Seccion de los destacados del dia-->
+    <!-- Sección de los destacados del día -->
     <section>
-      <h1 class="d-flex justify-content-center my-5">Destacados Del Dia!!</h1>
+      <h1 class="d-flex justify-content-center my-5">¡Destacados Del Día!</h1>
       <div class="container py-4">
         <div
           id="productCarousel"
@@ -308,7 +322,7 @@
                       alt="Cámara Digital"
                     />
                     <div class="card-body">
-                      <h5 class="card-title">Joystick Ps4</h5>
+                      <h5 class="card-title">Joystick PS4</h5>
                     </div>
                     <div class="product-overlay">
                       <p class="text-center mb-3">
@@ -369,7 +383,7 @@
                       alt="Tablet"
                     />
                     <div class="card-body">
-                      <h5 class="card-title">Ipad</h5>
+                      <h5 class="card-title">iPad</h5>
                     </div>
                     <div class="product-overlay">
                       <p class="text-center mb-3">
@@ -476,7 +490,7 @@
         <!-- Agregar más testimonios similares -->
       </div>
     </section>
-    <!-- PRODUCTOS!!!-->
+    <!-- PRODUCTOS -->
     <main>
       <h1 id="scrollspyHeading1" class="d-flex justify-content-center mb-3">
         Productos
@@ -538,7 +552,7 @@
               <img
                 src="./Assets/dualshockPs4.webp"
                 class="card-img-top image-product"
-                alt="DualShock PS4 Controller"
+                alt="Control DualShock PS4"
               />
               <div class="card-body">
                 <h5 class="card-title">DualShock PS4</h5>
@@ -741,6 +755,113 @@
                       transform="translate(30)"
                     ></path>
                   </svg>
+                  
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="./Assets/ipad2.webp"
+                class="card-img-top image-product"
+                alt="iPad"
+              />
+              <div class="card-body">
+                <h5 class="card-title">iPad</h5>
+                <p class="card-text">
+                  Experimenta versatilidad y potencia con el último iPad. Cuenta
+                  con una impresionante pantalla Retina y el potente chip A12
+                  Bionic para un rendimiento fluido.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="fw-bold fs-3">$329.99</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>(5.0)</span>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary w-100 mb-2 add-to-cart"
+                  data-id="3"
+                  data-name="Ipad"
+                  data-price="329.99"
+                >
+                  Agregar al carrito
+                </button>
+                <button class="cta">
+                  <span class="hover-underline-animation"> Ver detalles </span>
+                  <svg
+                    id="arrow-horizontal"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="10"
+                    viewBox="0 0 46 16"
+                  >
+                    <path
+                      id="Path_10"
+                      data-name="Path 10"
+                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                      transform="translate(30)"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="./Assets/laptop.webp"
+                class="card-img-top image-product"
+                alt="Laptop"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ultrabook Laptop</h5>
+                <p class="card-text">
+                  Mantente productivo en movimiento con este elegante ultrabook.
+                  Cuenta con un potente procesador, larga duración de batería y
+                  un diseño ligero para una portabilidad óptima.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="fw-bold fs-3">$899.99</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(4.2)</span>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary w-100 mb-2 add-to-cart"
+                  data-id="4"
+                  data-name="Laptop"
+                  data-price="899.99"
+                >
+                  Agregar al carrito
+                </button>
+                <button class="cta">
+                  <span class="hover-underline-animation"> Ver detalles </span>
+                  <svg
+                    id="arrow-horizontal"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="10"
+                    viewBox="0 0 46 16"
+                  >
+                    <path
+                      id="Path_10"
+                      data-name="Path 10"
+                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                      transform="translate(30)"
+                    ></path>
+                  </svg>
                 </button>
               </div>
             </div>
@@ -750,14 +871,14 @@
               <img
                 src="./Assets/ipad1.webp"
                 class="card-img-top image-product"
-                alt="Laptop"
+                alt="iPad Pro"
               />
               <div class="card-body">
-                <h5 class="card-title">Ipad Pro</h5>
+                <h5 class="card-title">iPad Pro</h5>
                 <p class="card-text">
-                  Mantente productivo en movimiento con este elegante ultrabook.
-                  Cuenta con un potente procesador, larga duración de batería y
-                  un diseño ligero para una portabilidad óptima.
+                  Experimenta el rendimiento de nivel profesional con el iPad Pro.
+                  Equipado con el chip M1, una pantalla Liquid Retina XDR y
+                  compatibilidad con el Apple Pencil para una creatividad sin límites.
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="fw-bold fs-3">$300.99</p>
@@ -773,7 +894,7 @@
                 <button
                   class="btn btn-primary w-100 mb-2 add-to-cart"
                   data-id="5"
-                  data-name="ipad"
+                  data-name="iPad Pro"
                   data-price="300.99"
                 >
                   Agregar al carrito
@@ -803,14 +924,14 @@
               <img
                 src="./Assets/Smartwatch.webp"
                 class="card-img-top image-product"
-                alt="Laptop"
+                alt="Smartwatch"
               />
               <div class="card-body">
                 <h5 class="card-title">Smartwatch</h5>
                 <p class="card-text">
-                  Mantente productivo en movimiento con este elegante ultrabook.
-                  Cuenta con un potente procesador, larga duración de batería y
-                  un diseño ligero para una portabilidad óptima.
+                  Mantente conectado y monitorea tu salud con este smartwatch avanzado.
+                  Cuenta con seguimiento de actividad, notificaciones inteligentes y
+                  una batería de larga duración.
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="fw-bold fs-3">$50.99</p>
@@ -856,17 +977,17 @@
               <img
                 src="./Assets/monitor.webp"
                 class="card-img-top image-product"
-                alt="Laptop"
+                alt="Monitor"
               />
               <div class="card-body">
                 <h5 class="card-title">Monitor</h5>
                 <p class="card-text">
-                  Mantente productivo en movimiento con este elegante ultrabook.
-                  Cuenta con un potente procesador, larga duración de batería y
-                  un diseño ligero para una portabilidad óptima.
+                  Mejora tu experiencia visual con este monitor de alta calidad.
+                  Ofrece colores vibrantes, alta resolución y un diseño elegante
+                  para tu espacio de trabajo o entretenimiento.
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <p class="fw-bold fs-3">$899.99</p>
+                  <p class="fw-bold fs-3">$370.99</p>
                   <div class="rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -909,14 +1030,14 @@
               <img
                 src="./Assets/xboxjoystick.jpg"
                 class="card-img-top image-product"
-                alt="Laptop"
+                alt="Control Xbox"
               />
               <div class="card-body">
-                <h5 class="card-title">Dualshock Xbox</h5>
+                <h5 class="card-title">Control Xbox</h5>
                 <p class="card-text">
-                  Mantente productivo en movimiento con este elegante ultrabook.
-                  Cuenta con un potente procesador, larga duración de batería y
-                  un diseño ligero para una portabilidad óptima.
+                  Experimenta un control preciso y cómodo con el mando oficial de Xbox.
+                  Diseñado ergonómicamente para largas sesiones de juego y compatible
+                  con Xbox Series X|S y PC.
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="fw-bold fs-3">$70.99</p>
@@ -932,7 +1053,7 @@
                 <button
                   class="btn btn-primary w-100 mb-2 add-to-cart"
                   data-id="8"
-                  data-name="Dualshock Xbox"
+                  data-name="Control Xbox"
                   data-price="70.99"
                 >
                   Agregar al carrito
@@ -960,7 +1081,7 @@
         </div>
       </section>
     </main>
-    <!-- Tambien te puede interesar-->
+    <!-- También te puede interesar -->
     <section class="container my-5">
       <h2 class="text-center mb-4">También te puede interesar</h2>
       <div class="row g-4">
@@ -1155,8 +1276,8 @@
         </div>
       </div>
     </section>
-    <!--FOOTER -->
-    <footer class="bg-body-tertiary py-4">
+    <!-- FOOTER -->
+    <footer class="py-4">
       <div class="container">
         <div class="row">
           <!-- Información de la empresa -->
@@ -1220,7 +1341,7 @@
         </div>
       </div>
     </footer>
-    <!--BOTON VOLVER ARRIBA -->
+    <!-- BOTÓN VOLVER ARRIBA -->
     <button
       id="backToTop"
       class="btn btn-primary position-fixed bottom-0 start-0 m-4 rounded-circle"
@@ -1265,13 +1386,13 @@
         </div>
       </div>
     </div>
-    <!-- SCRIPTS-->
+    <!-- SCRIPTS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <!--Start of Tawk.to Script-->
+    <!-- Inicio del Script de Tawk.to -->
     <script type="text/javascript">
       var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
@@ -1285,6 +1406,6 @@
         s0.parentNode.insertBefore(s1, s0);
       })();
     </script>
-    <!--End of Tawk.to Script-->
+    <!-- Fin del Script de Tawk.to -->
   </body>
 </html>

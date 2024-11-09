@@ -5,6 +5,8 @@
   --bs-body-bg: #fffff3;
   --bs-border-color: #dee2e6;
   --bs-letra-font-family: "Roboto Mono", monospace;
+  --bs-tertiary-bg: #2b3035;
+  --bs-nav-link-color:#4361ee;
 }
 
 :root[data-bs-theme="dark"] {
@@ -62,6 +64,7 @@
     --bs-letra-font-family: "Itim", cursive;
     --bs-body-font-weight:400;
     --bs-body-font-style:normal;
+    --bs-nav-link-color:#4361ee;
 }
 
 :root[data-bs-theme="gamer"]{
@@ -71,6 +74,7 @@
   --bs-letra-font-family:"Tiny5", sans-serif;
   --bs-body-font-weight:700;
   --bs-body-font-style:normal;
+  --bs-nav-link-color:#38b000;
 }
 *{
   scroll-behavior: smooth;
@@ -78,7 +82,45 @@
   font-weight: var(--bs-body-font-weight);
   font-style:var(--bs-body-font-style);
 }
-.cartaproducto {
+nav{
+  background-color: var(--bs-body-bg);
+}
+.navbar-nav .nav-link,
+.navbar-nav .nav-link:visited {
+  color: var(--bs-nav-link-color) !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active {
+  color: var(--bs-body-color) !important;
+}
+
+/* Estilos para el navbar en general */
+.navbar {
+  background-color: var(--bs-body-bg) !important;
+}
+
+/* Estilos para el toggler del navbar en dispositivos móviles */
+.navbar-toggler-icon {
+  background-color: var(--bs-body-color) !important;
+}
+
+/* Asegúrate de que el color del texto del navbar sea el correcto */
+.navbar,
+.navbar-brand,
+.navbar-nav {
+  color: var(--bs-body-color) !important;
+}
+header{
+  background-color: var(--bs-body-bg);
+  padding: 1rem;
+}
+
+footer{
+  background-color: var(--bs-tertiary-bg);
+}
+  .cartaproducto {
     position: relative;
     overflow: hidden;
     cursor: pointer;
