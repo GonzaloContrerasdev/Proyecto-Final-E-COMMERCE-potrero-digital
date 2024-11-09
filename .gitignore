@@ -1,1 +1,63 @@
 a.txt
+# Dependencias
+node_modules/
+/dist/
+/.venv/
+/.env
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración del IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de compilación
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Logs y bases de datos
+*.log
+*.sql
+*.sqlite
+
+# Archivos de ambiente
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Directorios de caché
+.sass-cache/
+.npm/
+.eslintcache
+.cache/
+
+# Archivos de compilación y construcción
+/build/
+/coverage/
+.next/
+out/
+
+# Archivos temporales
+*.swp
+*.swo
+*~
+
+# Archivos de paquetes
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
