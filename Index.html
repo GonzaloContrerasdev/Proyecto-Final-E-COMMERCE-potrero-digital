@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es" data-bs-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,43 +27,59 @@
       crossorigin="anonymous"
     />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-    <link rel="icon" type="image/webp" sizes="32x32" href="./Assets/Logo.webp">
-    <link rel="icon" type="image/webp" sizes="16x16" href="./Assets/Logo.webp">
-    <link rel="apple-touch-icon" sizes="180x180"    href="./Assets/Logo.webp">
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Agregar en el head de tu HTML -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"></script>
+    <link
+      rel="icon"
+      type="image/webp"
+      sizes="32x32"
+      href="./Assets/Logo.webp"
+    />
+    <link
+      rel="icon"
+      type="image/webp"
+      sizes="16x16"
+      href="./Assets/Logo.webp"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="./Assets/Logo.webp" />
     <script src="./scripts/index.js"></script>
     <script src="./scripts/cart.js"></script>
     <script src="./scripts/filter-sort.js"></script>
 
     <title>ElectroHub</title>
-    <meta
-      name="author"
-      content="Gonzalo Contreras"
-    />
+    <meta name="author" content="Gonzalo Contreras" />
     <meta
       name="description"
       content="Tu tienda de confianza para productos tecnológicos y gaming."
     />
-    <meta name="keywords" content="tecnología, gaming, productos, tienda, tienda gaming, ps4" />
+    <meta
+      name="keywords"
+      content="tecnología, gaming, productos, tienda, tienda gaming, ps4"
+    />
   </head>
   <body>
     <!-- Encabezado -->
     <header
       class="d-flex justify-content-between align-items-center p-3 position-relative"
-      style="z-index: 1030">
-      <h1 class="m-0 animate__animated animate__lightSpeedInLeft  ">ElectroHub</h1>
+      style="z-index: 1030"
+    >
+      <h1 class="m-0 animate__animated animate__lightSpeedInLeft">
+        ElectroHub
+      </h1>
       <div class="d-flex align-items-center">
         <div class="dropdown">
           <div
-              class="btn btn-secondary dropdown-toggle"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Selecciona un tema
-            </div>
+            class="btn btn-secondary dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Selecciona un tema
+          </div>
           <ul class="dropdown-menu">
             <li>
               <a class="dropdown-item" href="#" data-theme="light">Claro</a>
@@ -72,10 +88,10 @@
               <a class="dropdown-item" href="#" data-theme="dark">Oscuro</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#" data-theme="gamer">Gamer</a>
+              <a class="dropdown-item" href="#" data-theme="arcade">Arcade</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#" data-theme="slate">Pizarra</a>
+              <a class="dropdown-item" href="#" data-theme="blue">Blue</a>
             </li>
             <li>
               <a class="dropdown-item" href="#" data-theme="solar">Solar</a>
@@ -86,7 +102,7 @@
     </header>
 
     <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg sticky-top shadow-sm d-flex ">
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm d-flex">
       <div class="container-fluid my-2">
         <button
           class="navbar-toggler"
@@ -95,27 +111,43 @@
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class=""><label class="hamburger">
-            <input type="checkbox">
-            <svg viewBox="0 0 32 32">
-              <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-              <path class="line" d="M7 16 27 16"></path>
-            </svg>
-          </label></span>
+          aria-label="Toggle navigation"
+        >
+          <span class=""
+            ><label class="hamburger">
+              <input type="checkbox" />
+              <svg viewBox="0 0 32 32">
+                <path
+                  class="line line-top-bottom"
+                  d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+                ></path>
+                <path class="line" d="M7 16 27 16"></path>
+              </svg> </label
+          ></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" style="color: var( --bs-body-color);" aria-current="page" href="#">Inicio</a>
+              <a
+                class="nav-link"
+                style="color: var(--bs-body-color)"
+                aria-current="page"
+                href="#"
+                >Inicio</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: var(--bs-body-color);" href="#scrollspyHeading1">Productos</a>
+              <a
+                class="nav-link"
+                style="color: var(--bs-body-color)"
+                href="#scrollspyHeading1"
+                >Productos</a
+              >
             </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
-                style="color: var( --bs-body-color);"
+                style="color: var(--bs-body-color)"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -130,16 +162,22 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: var( --bs-body-color); " aria-disabled="true" href="#">Ofertas</a>
+              <a
+                class="nav-link"
+                style="color: var(--bs-body-color)"
+                aria-disabled="true"
+                href="#"
+                >Ofertas</a
+              >
             </li>
           </ul>
           <form class="d-flex col-6" role="search" id="searchForm">
             <input
-              class="form-control me-2"
               type="search"
-              placeholder="Buscar productos"
-              aria-label="Buscar"
               id="searchInput"
+              class="form-control"
+              placeholder="Buscar productos..."
+              aria-label="Buscar"
             />
             <button class="btn btn-outline-success" type="submit">
               Buscar
@@ -197,7 +235,7 @@
               class="d-block"
               alt="Imagen no encontrada"
               loading="lazy"
-              width="100%" 
+              width="100%"
             />
           </div>
           <div class="carousel-item">
@@ -526,16 +564,16 @@
               <button
                 type="button"
                 class="btn btn-outline-primary"
-                data-filter="audio"
+                data-filter="variedad"
               >
-                Audio
+                Variedad
               </button>
               <button
                 type="button"
                 class="btn btn-outline-primary"
-                data-filter="computers"
+                data-filter="perifericos"
               >
-                Computadoras
+                Perifericos
               </button>
             </div>
           </div>
@@ -553,485 +591,592 @@
       <section class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4" id="products-container">
           <div class="col">
-            <div class="card">
-              <img
-                src="./Assets/dualshockPs4.webp"
-                class="card-img-top image-product"
-                alt="Control DualShock PS4"
-              />
-              <div class="card-body">
-                <h5 class="card-title">DualShock PS4</h5>
-                <p class="card-text">
-                  Mejora tu experiencia de juego con el controlador Sony
-                  DualShock 4. Cuenta con sticks analógicos y botones de gatillo
-                  mejorados para un control preciso.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <p class="fw-bold fs-3">$59.99</p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(4.0)</span>
-                  </div>
-                </div>
-                <button
-                  class="btn btn-primary w-100 mb-2 add-to-cart"
-                  data-id="1"
-                  data-name="Joystick Ps4"
-                  data-price="70.99"
-                >
-                  Agregar al carrito
-                </button>
-                <button class="cta">
-                  <span class="hover-underline-animation"> Ver detalles </span>
-                  <svg
-                    id="arrow-horizontal"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="10"
-                    viewBox="0 0 46 16">
-                    <path
-                      id="Path_10"
-                      data-name="Path 10"
-                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                      transform="translate(30)"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img
-                src="./Assets/Airpods.webp"
-                class="card-img-top image-product"
-                alt="Apple AirPods"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Apple AirPods</h5>
-                <p class="card-text">
-                  Disfruta de un sonido de alta calidad y conectividad sin
-                  problemas con los Apple AirPods. Estos auriculares
-                  inalámbricos ofrecen hasta 5 horas de tiempo de escucha con
-                  una sola carga.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <p class="fw-bold fs-3">$20</p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <span>(4.5)</span>
-                  </div>
-                </div>
-                <button
-                class="btn btn-primary w-100 mb-2 add-to-cart"
-                data-id="2"
-                data-name="Airpods"
-                data-price="20.00"
-              >
-                Agregar al carrito
-              </button>
-                <button class="cta">
-                  <span class="hover-underline-animation"> Ver detalles </span>
-                  <svg
-                    id="arrow-horizontal"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="10"
-                    viewBox="0 0 46 16"
+            <div
+              class="card product-card"
+              data-category="gaming"
+              data-price="59.99"
+              data-rating="4.0"
+            >
+              <div class="card">
+                <img
+                  src="./Assets/dualshockPs4.webp"
+                  class="card-img-top image-product"
+                  alt="Control DualShock PS4"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">DualShock PS4</h5>
+                  <p class="card-text">
+                    Mejora tu experiencia de juego con el controlador Sony
+                    DualShock 4. Cuenta con sticks analógicos y botones de
+                    gatillo mejorados para un control preciso.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
                   >
-                    <path
-                      id="Path_10"
-                      data-name="Path 10"
-                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                      transform="translate(30)"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img
-                src="./Assets/ipad2.webp"
-                class="card-img-top image-product"
-                alt="iPad"
-              />
-              <div class="card-body">
-                <h5 class="card-title">iPad</h5>
-                <p class="card-text">
-                  Experimenta versatilidad y potencia con el último iPad. Cuenta
-                  con una impresionante pantalla Retina y el potente chip A12
-                  Bionic para un rendimiento fluido.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <p class="fw-bold fs-3">$329.99</p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <span>(5.0)</span>
+                    <p class="fw-bold fs-3">$59.99</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <span>(4.0)</span>
+                    </div>
                   </div>
-                </div>
-                <button
-                  class="btn btn-primary w-100 mb-2 add-to-cart"
-                  data-id="3"
-                  data-name="Ipad"
-                  data-price="329.99"
-                >
-                  Agregar al carrito
-                </button>
-                <button class="cta">
-                  <span class="hover-underline-animation"> Ver detalles </span>
-                  <svg
-                    id="arrow-horizontal"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="10"
-                    viewBox="0 0 46 16"
+                  <button
+                    class="btn btn-primary w-100 mb-2 add-to-cart"
+                    data-id="1"
+                    data-name="Joystick Ps4"
+                    data-price="70.99"
                   >
-                    <path
-                      id="Path_10"
-                      data-name="Path 10"
-                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                      transform="translate(30)"
-                    ></path>
-                  </svg>
-                </button>
+                    Agregar al carrito
+                  </button>
+                  <button class="cta">
+                    <span class="hover-underline-animation">
+                      Ver detalles
+                    </span>
+                    <svg
+                      id="arrow-horizontal"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="10"
+                      viewBox="0 0 46 16"
+                    >
+                      <path
+                        id="Path_10"
+                        data-name="Path 10"
+                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                        transform="translate(30)"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img
-                src="./Assets/laptop.webp"
-                class="card-img-top image-product"
-                alt="Laptop"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Ultrabook Laptop</h5>
-                <p class="card-text">
-                  Mantente productivo en movimiento con este elegante ultrabook.
-                  Cuenta con un potente procesador, larga duración de batería y
-                  un diseño ligero para una portabilidad óptima.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <p class="fw-bold fs-3">$899.99</p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(4.2)</span>
+            <div
+              class="card product-card"
+              data-category="variedad"
+              data-price="20.00"
+              data-rating="4.5"
+            >
+              <div class="card">
+                <img
+                  src="./Assets/Airpods.webp"
+                  class="card-img-top image-product"
+                  alt="Apple AirPods"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Apple AirPods</h5>
+                  <p class="card-text">
+                    Disfruta de un sonido de alta calidad y conectividad sin
+                    problemas con los Apple AirPods. Estos auriculares
+                    inalámbricos ofrecen hasta 5 horas de tiempo de escucha con
+                    una sola carga.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p class="fw-bold fs-3">$20.00</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                      <span>(4.5)</span>
+                    </div>
                   </div>
-                </div>
-                <button
-                  class="btn btn-primary w-100 mb-2 add-to-cart"
-                  data-id="4"
-                  data-name="Laptop"
-                  data-price="899.99"
-                >
-                  Agregar al carrito
-                </button>
-                <button class="cta">
-                  <span class="hover-underline-animation"> Ver detalles </span>
-                  <svg
-                    id="arrow-horizontal"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="10"
-                    viewBox="0 0 46 16"
+                  <button
+                    class="btn btn-primary w-100 mb-2 add-to-cart"
+                    data-id="2"
+                    data-name="Airpods"
+                    data-price="20.00"
                   >
-                    <path
-                      id="Path_10"
-                      data-name="Path 10"
-                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                      transform="translate(30)"
-                    ></path>
-                  </svg>
-                  
-                </button>
+                    Agregar al carrito
+                  </button>
+                  <button class="cta">
+                    <span class="hover-underline-animation">
+                      Ver detalles
+                    </span>
+                    <svg
+                      id="arrow-horizontal"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="10"
+                      viewBox="0 0 46 16"
+                    >
+                      <path
+                        id="Path_10"
+                        data-name="Path 10"
+                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                        transform="translate(30)"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img
-                src="./Assets/ipad2.webp"
-                class="card-img-top image-product"
-                alt="iPad"
-              />
-              <div class="card-body">
-                <h5 class="card-title">iPad</h5>
-                <p class="card-text">
-                  Experimenta versatilidad y potencia con el último iPad. Cuenta
-                  con una impresionante pantalla Retina y el potente chip A12
-                  Bionic para un rendimiento fluido.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <p class="fw-bold fs-3">$329.99</p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <span>(5.0)</span>
+            <div
+              class="card product-card"
+              data-category="variedad"
+              data-price="329.99"
+              data-rating="5.0"
+            >
+              <div class="card">
+                <img
+                  src="./Assets/ipad2.webp"
+                  class="card-img-top image-product"
+                  alt="iPad"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">iPad</h5>
+                  <p class="card-text">
+                    Experimenta versatilidad y potencia con el último iPad.
+                    Cuenta con una impresionante pantalla Retina y el potente
+                    chip A12 Bionic para un rendimiento fluido.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p class="fw-bold fs-3">$329.99</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <span>(5.0)</span>
+                    </div>
                   </div>
-                </div>
-                <button
-                  class="btn btn-primary w-100 mb-2 add-to-cart"
-                  data-id="3"
-                  data-name="Ipad"
-                  data-price="329.99"
-                >
-                  Agregar al carrito
-                </button>
-                <button class="cta">
-                  <span class="hover-underline-animation"> Ver detalles </span>
-                  <svg
-                    id="arrow-horizontal"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="10"
-                    viewBox="0 0 46 16"
+                  <button
+                    class="btn btn-primary w-100 mb-2 add-to-cart"
+                    data-id="3"
+                    data-name="Ipad"
+                    data-price="329.99"
                   >
-                    <path
-                      id="Path_10"
-                      data-name="Path 10"
-                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                      transform="translate(30)"
-                    ></path>
-                  </svg>
-                </button>
+                    Agregar al carrito
+                  </button>
+                  <button class="cta">
+                    <span class="hover-underline-animation">
+                      Ver detalles
+                    </span>
+                    <svg
+                      id="arrow-horizontal"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="10"
+                      viewBox="0 0 46 16"
+                    >
+                      <path
+                        id="Path_10"
+                        data-name="Path 10"
+                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                        transform="translate(30)"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img
-                src="./Assets/laptop.webp"
-                class="card-img-top image-product"
-                alt="Laptop"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Ultrabook Laptop</h5>
-                <p class="card-text">
-                  Mantente productivo en movimiento con este elegante ultrabook.
-                  Cuenta con un potente procesador, larga duración de batería y
-                  un diseño ligero para una portabilidad óptima.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <p class="fw-bold fs-3">$899.99</p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(4.2)</span>
+            <div
+              class="card product-card"
+              data-category="variedad"
+              data-price="899.99"
+              data-rating="4.2"
+            >
+              <div class="card">
+                <img
+                  src="./Assets/laptop.webp"
+                  class="card-img-top image-product"
+                  alt="Laptop"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Ultrabook Laptop</h5>
+                  <p class="card-text">
+                    Mantente productivo en movimiento con este elegante
+                    ultrabook. Cuenta con un potente procesador, larga duración
+                    de batería y un diseño ligero para una portabilidad óptima.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p class="fw-bold fs-3">$899.99</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <span>(4.2)</span>
+                    </div>
                   </div>
-                </div>
-                <button
-                  class="btn btn-primary w-100 mb-2 add-to-cart"
-                  data-id="4"
-                  data-name="Laptop"
-                  data-price="899.99"
-                >
-                  Agregar al carrito
-                </button>
-                <button class="cta">
-                  <span class="hover-underline-animation"> Ver detalles </span>
-                  <svg
-                    id="arrow-horizontal"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="10"
-                    viewBox="0 0 46 16"
+                  <button
+                    class="btn btn-primary w-100 mb-2 add-to-cart"
+                    data-id="4"
+                    data-name="Laptop"
+                    data-price="899.99"
                   >
-                    <path
-                      id="Path_10"
-                      data-name="Path 10"
-                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                      transform="translate(30)"
-                    ></path>
-                  </svg>
-                </button>
+                    Agregar al carrito
+                  </button>
+                  <button class="cta">
+                    <span class="hover-underline-animation">
+                      Ver detalles
+                    </span>
+                    <svg
+                      id="arrow-horizontal"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="10"
+                      viewBox="0 0 46 16"
+                    >
+                      <path
+                        id="Path_10"
+                        data-name="Path 10"
+                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                        transform="translate(30)"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img
-                src="./Assets/ipad1.webp"
-                class="card-img-top image-product"
-                alt="iPad Pro"
-              />
-              <div class="card-body">
-                <h5 class="card-title">iPad Pro</h5>
-                <p class="card-text">
-                  Experimenta el rendimiento de nivel profesional con el iPad Pro.
-                  Equipado con el chip M1, una pantalla Liquid Retina XDR y
-                  compatibilidad con el Apple Pencil para una creatividad sin límites.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <p class="fw-bold fs-3">$300.99</p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(4.2)</span>
+            <div
+              class="card product-card"
+              data-category="perifericos"
+              data-price="329.99"
+              data-rating="5.0"
+            >
+              <div class="card">
+                <img
+                  src="./Assets/ipad2.webp"
+                  class="card-img-top image-product"
+                  alt="iPad"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">iPad</h5>
+                  <p class="card-text">
+                    Experimenta versatilidad y potencia con el último iPad.
+                    Cuenta con una impresionante pantalla Retina y el potente
+                    chip A12 Bionic para un rendimiento fluido.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p class="fw-bold fs-3">$329.99</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <span>(5.0)</span>
+                    </div>
                   </div>
-                </div>
-                <button
-                  class="btn btn-primary w-100 mb-2 add-to-cart"
-                  data-id="5"
-                  data-name="iPad Pro"
-                  data-price="300.99"
-                >
-                  Agregar al carrito
-                </button>
-                <button class="cta">
-                  <span class="hover-underline-animation"> Ver detalles </span>
-                  <svg
-                    id="arrow-horizontal"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="10"
-                    viewBox="0 0 46 16"
+                  <button
+                    class="btn btn-primary w-100 mb-2 add-to-cart"
+                    data-id="3"
+                    data-name="Ipad"
+                    data-price="329.99"
                   >
-                    <path
-                      id="Path_10"
-                      data-name="Path 10"
-                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                      transform="translate(30)"
-                    ></path>
-                  </svg>
-                </button>
+                    Agregar al carrito
+                  </button>
+                  <button class="cta">
+                    <span class="hover-underline-animation">
+                      Ver detalles
+                    </span>
+                    <svg
+                      id="arrow-horizontal"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="10"
+                      viewBox="0 0 46 16"
+                    >
+                      <path
+                        id="Path_10"
+                        data-name="Path 10"
+                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                        transform="translate(30)"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img
-                src="./Assets/Smartwatch.webp"
-                class="card-img-top image-product"
-                alt="Smartwatch"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Smartwatch</h5>
-                <p class="card-text">
-                  Mantente conectado y monitorea tu salud con este smartwatch avanzado.
-                  Cuenta con seguimiento de actividad, notificaciones inteligentes y
-                  una batería de larga duración.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <p class="fw-bold fs-3">$50.99</p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(4.2)</span>
+            <div
+              class="card product-card"
+              data-category="variedad"
+              data-price="899.99"
+              data-rating="4.2"
+            >
+              <div class="card">
+                <img
+                  src="./Assets/laptop.webp"
+                  class="card-img-top image-product"
+                  alt="Laptop"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Ultrabook Laptop</h5>
+                  <p class="card-text">
+                    Mantente productivo en movimiento con este elegante
+                    ultrabook. Cuenta con un potente procesador, larga duración
+                    de batería y un diseño ligero para una portabilidad óptima.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p class="fw-bold fs-3">$899.99</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <span>(4.2)</span>
+                    </div>
                   </div>
-                </div>
-                <button
-                  class="btn btn-primary w-100 mb-2 add-to-cart"
-                  data-id="6"
-                  data-name="Smartwatch"
-                  data-price="50.99"
-                >
-                  Agregar al carrito
-                </button>
-                <button class="cta">
-                  <span class="hover-underline-animation"> Ver detalles </span>
-                  <svg
-                    id="arrow-horizontal"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="10"
-                    viewBox="0 0 46 16"
+                  <button
+                    class="btn btn-primary w-100 mb-2 add-to-cart"
+                    data-id="4"
+                    data-name="Laptop"
+                    data-price="899.99"
                   >
-                    <path
-                      id="Path_10"
-                      data-name="Path 10"
-                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                      transform="translate(30)"
-                    ></path>
-                  </svg>
-                </button>
+                    Agregar al carrito
+                  </button>
+                  <button class="cta">
+                    <span class="hover-underline-animation">
+                      Ver detalles
+                    </span>
+                    <svg
+                      id="arrow-horizontal"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="10"
+                      viewBox="0 0 46 16"
+                    >
+                      <path
+                        id="Path_10"
+                        data-name="Path 10"
+                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                        transform="translate(30)"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img
-                src="./Assets/monitor.webp"
-                class="card-img-top image-product"
-                alt="Monitor"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Monitor</h5>
-                <p class="card-text">
-                  Mejora tu experiencia visual con este monitor de alta calidad.
-                  Ofrece colores vibrantes, alta resolución y un diseño elegante
-                  para tu espacio de trabajo o entretenimiento.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <p class="fw-bold fs-3">$370.99</p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(4.2)</span>
+            <div
+              class="card product-card"
+              data-category="variedad"
+              data-price="120.99"
+              data-rating="4.2"
+            >
+              <div class="card">
+                <img
+                  src="./Assets/ipad1.webp"
+                  class="card-img-top image-product"
+                  alt="iPad Pro"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">iPad Pro</h5>
+                  <p class="card-text">
+                    Experimenta el rendimiento de nivel profesional con el iPad
+                    Pro. Equipado con el chip M1, una pantalla Liquid Retina XDR
+                    y compatibilidad con el Apple Pencil para una creatividad
+                    sin límites.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p class="fw-bold fs-3">$120.99</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <span>(4.2)</span>
+                    </div>
                   </div>
-                </div>
-                <button
-                  class="btn btn-primary w-100 mb-2 add-to-cart"
-                  data-id="7"
-                  data-name="Monitor"
-                  data-price="370.99"
-                >
-                  Agregar al carrito
-                </button>
-                <button class="cta">
-                  <span class="hover-underline-animation"> Ver detalles </span>
-                  <svg
-                    id="arrow-horizontal"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="10"
-                    viewBox="0 0 46 16"
+                  <button
+                    class="btn btn-primary w-100 mb-2 add-to-cart"
+                    data-id="5"
+                    data-name="iPad Pro"
+                    data-price="300.99"
                   >
-                    <path
-                      id="Path_10"
-                      data-name="Path 10"
-                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                      transform="translate(30)"
-                    ></path>
-                  </svg>
-                </button>
+                    Agregar al carrito
+                  </button>
+                  <button class="cta">
+                    <span class="hover-underline-animation">
+                      Ver detalles
+                    </span>
+                    <svg
+                      id="arrow-horizontal"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="10"
+                      viewBox="0 0 46 16"
+                    >
+                      <path
+                        id="Path_10"
+                        data-name="Path 10"
+                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                        transform="translate(30)"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card product-card" data-category="gaming" data-price="299.99" data-rating="4.5">
+            <div
+              class="card product-card"
+              data-category="variedad"
+              data-price="50.99"
+              data-rating="4.2"
+            >
+              <div class="card">
+                <img
+                  src="./Assets/Smartwatch.webp"
+                  class="card-img-top image-product"
+                  alt="Smartwatch"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Smartwatch</h5>
+                  <p class="card-text">
+                    Mantente conectado y monitorea tu salud con este smartwatch
+                    avanzado. Cuenta con seguimiento de actividad,
+                    notificaciones inteligentes y una batería de larga duración.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p class="fw-bold fs-3">$50.99</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <span>(4.2)</span>
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn-primary w-100 mb-2 add-to-cart"
+                    data-id="6"
+                    data-name="Smartwatch"
+                    data-price="50.99"
+                  >
+                    Agregar al carrito
+                  </button>
+                  <button class="cta">
+                    <span class="hover-underline-animation">
+                      Ver detalles
+                    </span>
+                    <svg
+                      id="arrow-horizontal"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="10"
+                      viewBox="0 0 46 16"
+                    >
+                      <path
+                        id="Path_10"
+                        data-name="Path 10"
+                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                        transform="translate(30)"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card product-card"
+              data-category="perifericos"
+              data-price="370.99"
+              data-rating="4.2"
+            >
+              <div class="card">
+                <img
+                  src="./Assets/monitor.webp"
+                  class="card-img-top image-product"
+                  alt="Monitor"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Monitor</h5>
+                  <p class="card-text">
+                    Mejora tu experiencia visual con este monitor de alta
+                    calidad. Ofrece colores vibrantes, alta resolución y un
+                    diseño elegante para tu espacio de trabajo o
+                    entretenimiento.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p class="fw-bold fs-3">$370.99</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <span>(4.2)</span>
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn-primary w-100 mb-2 add-to-cart"
+                    data-id="7"
+                    data-name="Monitor"
+                    data-price="370.99"
+                  >
+                    Agregar al carrito
+                  </button>
+                  <button class="cta">
+                    <span class="hover-underline-animation">
+                      Ver detalles
+                    </span>
+                    <svg
+                      id="arrow-horizontal"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="10"
+                      viewBox="0 0 46 16"
+                    >
+                      <path
+                        id="Path_10"
+                        data-name="Path 10"
+                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                        transform="translate(30)"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card product-card"
+              data-category="gaming"
+              data-price="299.99"
+              data-rating="4.5"
+            >
               <img
                 src="./Assets/xboxjoystick.jpg"
                 class="card-img-top image-product"
@@ -1040,9 +1185,9 @@
               <div class="card-body">
                 <h5 class="card-title">Control Xbox</h5>
                 <p class="card-text">
-                  Experimenta un control preciso y cómodo con el mando oficial de Xbox.
-                  Diseñado ergonómicamente para largas sesiones de juego y compatible
-                  con Xbox Series X|S y PC.
+                  Experimenta un control preciso y cómodo con el mando oficial
+                  de Xbox. Diseñado ergonómicamente para largas sesiones de
+                  juego y compatible con Xbox Series X|S y PC.
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="fw-bold fs-3">$70.99</p>
@@ -1254,27 +1399,72 @@
       <div class="container">
         <h2 class="text-center mb-5">Preguntas Frecuentes</h2>
         <div class="accordion" id="accordionFAQ">
+          <!-- Pregunta 1 -->
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 ¿Cuál es el tiempo de entrega?
               </button>
             </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse show"
-              aria-labelledby="headingOne"
-              data-bs-parent="#accordionFAQ"
-            >
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
               <div class="accordion-body">
-                Nuestro tiempo de entrega estándar es de 3 a 5 días hábiles.
+                Nuestro tiempo de entrega estándar es de 3 a 5 días hábiles en zonas urbanas. Para zonas rurales puede extenderse hasta 7 días hábiles.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pregunta 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                ¿Qué métodos de pago aceptan?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                Aceptamos múltiples formas de pago: tarjetas de crédito/débito (Visa, MasterCard, American Express), PayPal, transferencia bancaria y pago en efectivo en puntos autorizados.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pregunta 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                ¿Cuál es su política de devoluciones?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                Tienes 14 días desde la recepción del producto para solicitar una devolución. El producto debe estar sin usar y en su empaque original. Los costos de envío de devolución corren por cuenta del cliente.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pregunta 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                ¿Los productos tienen garantía?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                Sí, todos nuestros productos cuentan con garantía oficial del fabricante. Las consolas tienen 1 año de garantía, los accesorios 6 meses y los juegos 30 días por defectos de fábrica.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pregunta 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                ¿Hacen envíos internacionales?
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                Por el momento solo realizamos envíos dentro del territorio nacional. Estamos trabajando para expandir nuestros servicios internacionalmente.
               </div>
             </div>
           </div>
@@ -1287,8 +1477,10 @@
         <div class="row">
           <!-- Información de la empresa -->
           <div class="col-md-4 mb-3">
-            <h5>Game To-Do</h5>
-            <p style="color: var(--bs-p-color);" >Tu tienda de confianza para productos tecnológicos y gaming.</p>
+            <h5>ElectroHub</h5>
+            <p style="color: var(--bs-p-color)">
+              Tu tienda de confianza para productos tecnológicos y gaming.
+            </p>
             <div class="social-links">
               <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
               <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
@@ -1391,6 +1583,22 @@
         </div>
       </div>
     </div>
+    <!--TOAST-->
+    <div class="toast-container position-fixed bottom-0 p-3">
+      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="welcomeToast">
+        <div class="toast-header bg-primary text-white">
+          <i class="bi bi-controller me-2"></i>
+          <strong class="me-auto">¡Bienvenido a ElectroHub!</strong>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          🎮 Descubre las mejores ofertas en tecnología y gaming. 
+          <hr>
+          <small>¿Necesitas ayuda? No dudes en contactarnos</small>
+        </div>
+      </div>
+    </div>
+
     <!-- SCRIPTS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -1412,12 +1620,6 @@
       })();
     </script>
     <!-- Fin del Script de Tawk.to -->
-    <div class="modal fade" id="quickViewModal">
-      <!-- ... -->
-    </div>
-    <!-- Agregar el toast aquí -->
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-      <!-- Código del toast -->
-    </div>
+    <script src="./scripts/cloudinary.js"></script>
   </body>
 </html>

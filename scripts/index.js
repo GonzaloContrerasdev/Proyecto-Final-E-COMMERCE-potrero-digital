@@ -1,47 +1,90 @@
-import { v2 as cloudinary } from 'cloudinary';
+console.log('DOM Cargado');
+console.log('Bootstrap disponible:', typeof bootstrap !== 'undefined');
+console.log('Elemento toast:', document.getElementById('welcomeToast'));
 
-// First, import cloudinary at the top of your file
+document.addEventListener('DOMContentLoaded', () => {
+  const themeDropdownItems = document.querySelectorAll('.dropdown-item[data-theme]');
+  const currentTheme = localStorage.getItem('theme') || 'light';
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Initialize Cloudinary configuration
-  cloudinary.config({ 
-    cloud_name: 'dfk2xy4wm', 
-    api_key: '652456149338924', 
-    api_secret: 'TT3NOdmZMznZc8iJYp0fKashHmU' // Make sure to use your actual API secret
-  });
+  document.documentElement.setAttribute('data-bs-theme', currentTheme);
 
-  // Your existing code remains the same...
-  const themeDropdownItems = document.querySelectorAll(".dropdown-item[data-theme]");
-  // ... (rest of your existing code)
-
-  // Add a function to handle image uploads
-  async function handleImageUpload(imageFile) {
-    try {
-      const uploadResult = await cloudinary.uploader.upload(imageFile, {
-        // You can specify options here
-        fetch_format: 'auto',
-        quality: 'auto'
-      });
-      console.log('Upload successful:', uploadResult);
-      return uploadResult.secure_url;
-    } catch (error) {
-      console.error('Upload failed:', error);
-      return null;
-    }
+  function switchTheme(e) {
+    e.preventDefault();
+    const selectedTheme = e.target.getAttribute('data-theme');
+    document.documentElement.setAttribute('data-bs-theme', selectedTheme);
+    localStorage.setItem('theme', selectedTheme);
   }
 
-  // Example usage with a file input
-  const fileInput = document.querySelector('input[type="file"]'); // Add this input to your HTML
-  if (fileInput) {
-    fileInput.addEventListener('change', async (e) => {
-      const file = e.target.files[0];
-      if (file) {
-        const imageUrl = await handleImageUpload(file);
-        if (imageUrl) {
-          // Use the uploaded image URL as needed
-          console.log('Uploaded image URL:', imageUrl);
+  themeDropdownItems.forEach(item => {
+    item.addEventListener('click', switchTheme);
+  });
+
+  initializeSearch();
+  
+  try {
+    const welcomeToastElement = document.getElementById('welcomeToast');
+    
+    if (!welcomeToastElement) {
+      console.error('No se encontró el elemento del toast');
+      return;
+    }
+
+    const welcomeToast = new bootstrap.Toast(welcomeToastElement, {
+      animation: true,
+      autohide: true,
+      delay: 3500
+    });
+
+    setTimeout(() => {
+      welcomeToast.show();
+    }, 1000);
+
+  } catch (error) {
+    console.error('Error al inicializar el toast:', error);
+  }
+
+  const productImages = document.querySelectorAll('.image-product');
+  
+  productImages.forEach(img => {
+    img.classList.add('zoom-image');
+    img.setAttribute('data-zoomable', '');
+    img.style.cursor = 'zoom-in';
+  });
+
+  mediumZoom('[data-zoomable]', {
+    margin: 24,
+    background: 'rgba(0,0,0,0.9)',
+    scrollOffset: 0,
+    container: {
+      top: 80
+    }
+  });
+});
+
+function initializeSearch() {
+  const searchInput = document.querySelector('#searchInput');
+  const products = document.querySelectorAll('.product-card');
+
+  searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    
+    products.forEach(product => {
+      const title = product.querySelector('.card-title').textContent.toLowerCase();
+      const description = product.querySelector('.card-text').textContent.toLowerCase();
+      
+      const matches = title.includes(searchTerm) || description.includes(searchTerm);
+      const productCard = product.closest('.col');
+      
+      productCard.style.display = matches || searchTerm === '' ? '' : 'none';
+      
+      product.classList.remove('highlight-search');
+      
+      if (matches && searchTerm !== '') {
+        product.classList.add('highlight-search');
+        if (productCard.style.display !== 'none') {
+          product.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }
     });
-  }
-});
+  });
+}

@@ -1,45 +1,68 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('.btn-group button');
+    // Selectores
+    const filterButtons = document.querySelectorAll('[data-filter]');
     const sortSelect = document.getElementById('sortSelect');
-    const productsContainer = document.getElementById('products-container'); // Asegúrate de que tus productos estén dentro de un contenedor con este id
+    const productsContainer = document.querySelector('.row.row-cols-1');
 
-    // Función para filtrar productos
-    function filterProducts(category) {
-        const products = document.querySelectorAll('.product-card');
-        products.forEach(product => {
-            if (category === 'all' || product.dataset.category === category) {
-                product.style.display = '';
-            } else {
-                product.style.display = 'none';
-            }
-        });
-    }
+    let currentFilter = 'all';
+    let currentSort = '';
 
-    // Función para ordenar productos
-    function sortProducts(criteria) {
+    // Función combinada de filtrado y ordenamiento
+    function filterAndSortProducts() {
         const products = Array.from(document.querySelectorAll('.product-card'));
-        products.sort((a, b) => {
-            if (criteria === 'price-asc') {
-                return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
-            } else if (criteria === 'price-desc') {
-                return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
-            } else if (criteria === 'rating') {
-                return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
-            }
+        
+        // Primero filtramos
+        products.forEach(product => {
+            const productCol = product.closest('.col');
+            const shouldShow = currentFilter === 'all' || product.dataset.category === currentFilter;
+            productCol.style.display = shouldShow ? '' : 'none';
         });
-        productsContainer.innerHTML = '';
-        products.forEach(product => productsContainer.appendChild(product));
+
+        // Luego ordenamos los productos visibles
+        const visibleProducts = products.filter(product => 
+            product.closest('.col').style.display !== 'none'
+        );
+
+        // Aplicar ordenamiento
+        if (currentSort) {
+            visibleProducts.sort((a, b) => {
+                const getPriceValue = elem => parseFloat(elem.querySelector('.fw-bold').textContent.replace('$', ''));
+                const getRatingValue = elem => parseFloat(elem.dataset.rating);
+
+                switch (currentSort) {
+                    case 'price-asc':
+                        return getPriceValue(a) - getPriceValue(b);
+                    case 'price-desc':
+                        return getPriceValue(b) - getPriceValue(a);
+                    case 'rating':
+                        return getRatingValue(b) - getRatingValue(a);
+                    default:
+                        return 0;
+                }
+            });
+
+            // Reordenar en el DOM
+            visibleProducts.forEach(product => {
+                productsContainer.appendChild(product.closest('.col'));
+            });
+        }
     }
 
-    // Event listeners para los botones de filtro
+    // Event listeners
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            filterProducts(button.dataset.filter);
+            currentFilter = button.dataset.filter;
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            filterAndSortProducts();
         });
     });
 
-    // Event listener para el select de ordenamiento
-    sortSelect.addEventListener('change', () => {
-        sortProducts(sortSelect.value);
+    sortSelect.addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        filterAndSortProducts();
     });
+
+    // Inicialización
+    filterAndSortProducts();
 });
