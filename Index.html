@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="light">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -67,18 +67,18 @@
       class="d-flex justify-content-between align-items-center p-3 position-relative"
       style="z-index: 1030"
     >
-      <h1 class="m-0 animate__animated animate__lightSpeedInLeft">
+      <h1 class="my-2 animate__animated animate__lightSpeedInLeft">
         ElectroHub
       </h1>
       <div class="d-flex align-items-center">
         <div class="dropdown">
           <div
-            class="btn btn-secondary dropdown-toggle"
+            class="btn  dropdown-toggle"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Selecciona un tema
+            Cambiar Tema
           </div>
           <ul class="dropdown-menu">
             <li>
@@ -171,7 +171,7 @@
               >
             </li>
           </ul>
-          <form class="d-flex col-6" role="search" id="searchForm">
+          <form class=" d-flex col-6 mb-auto me-5" role="search" id="searchForm">
             <input
               type="search"
               id="searchInput"
@@ -179,18 +179,20 @@
               placeholder="Buscar productos..."
               aria-label="Buscar"
             />
-            <button class="btn btn-outline-success" type="submit">
+            <button class="btn btn-outline-success ms-4 " type="submit">
               Buscar
             </button>
           </form>
-          <div class="ms-auto">
-            <button class="btn btn-outline-primary" id="cart-button">
-              <i class="bi bi-cart"></i> <span id="cart-count">0</span>
-            </button>
-          </div>
+        </div>
+        <div class="ms-auto">
+          <button class="btn btn-outline-primary" id="cart-button">
+            <i class="bi bi-cart"></i> <span id="cart-count">0</span>
+          </button>
         </div>
       </div>
     </nav>
+
+    
     <!-- Carrusel principal de la página -->
     <section>
       <div id="carouselExampleIndicators" class="carousel slide">
@@ -1586,10 +1588,10 @@
     <!--TOAST-->
     <div class="toast-container position-fixed bottom-0 p-3">
       <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="welcomeToast">
-        <div class="toast-header bg-primary text-white">
+        <div class="toast-header">
           <i class="bi bi-controller me-2"></i>
           <strong class="me-auto">¡Bienvenido a ElectroHub!</strong>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+          <button type="button" class="btn-close " data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">
           🎮 Descubre las mejores ofertas en tecnología y gaming. 

@@ -59,6 +59,28 @@ document.addEventListener('DOMContentLoaded', () => {
       top: 80
     }
   });
+
+  const backToTopButton = document.getElementById('backToTop');
+  
+  if (!backToTopButton) {
+    console.error('No se encontró el botón de volver arriba');
+    return;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopButton.style.display = 'block';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  });
+
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 });
 
 function initializeSearch() {

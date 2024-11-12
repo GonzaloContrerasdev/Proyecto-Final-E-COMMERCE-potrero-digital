@@ -91,9 +91,8 @@
   --bs-body-color: #F9F16F;
   --bs-body-bg: #1F2D40;
   --bs-border-color: #f5f5f5;
-  font-family: "Edu AU VIC WA NT Pre", cursive;
-  font-optical-sizing: auto;
-  font-style: normal;
+  --bs-letra-font-family: "Edu AU VIC WA NT Pre", cursive;
+  --bs-body-font-style: normal;
   --bs-nav-link-color:#fbf9e3;
   --bs-burguer-bg: #fbf9e3;
   --bs-small-color:#fbf9e3;
@@ -104,16 +103,15 @@
 :root[data-bs-theme="solar"]{
   --bs-body-color: #000000;
   --bs-body-bg: #e9e6f1;
-  --bs-border-color: #f5f5f5;
-  font-family: "Cabin Sketch", cursive;
-  font-optical-sizing: auto;
-  font-style: normal;
+  --bs-border-color: #000000;
+  --bs-letra-font-family: "Cabin Sketch", cursive;
+  --bs-body-font-style: normal;
   --bs-nav-link-color:#fbf9e3;
   --bs-burguer-bg: #fbf9e3;
-  --bs-small-color:#fbf9e3;
+  --bs-small-color:#000000;
   --bs-tertiary-bg: #2b3035;
   --bs-p-color: #686868;
-  --bs-hgfade-color: #fbf9e3;
+  --bs-hgfade-color: #3b3a34;
 }
 *{
   scroll-behavior: smooth;
