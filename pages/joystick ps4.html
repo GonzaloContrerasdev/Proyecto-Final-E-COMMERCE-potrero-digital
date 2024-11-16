@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro | Dualshock Ps4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../Styles/stylespages.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">ElectroHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-cart"></i> Carrito <span class="badge bg-secondary" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="#">Productos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Control DualShock 4 PS4</li>
+            </ol>
+        </nav>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://res.cloudinary.com/dfk2xy4wm/image/upload/f_auto,q_auto/v1/assets/fkibxaa7l47hl2hjsnsx" class="d-block w-100" alt="Control DualShock 4 PS4 - Vista frontal">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/placeholder.svg?height=400&width=400" class="d-block w-100" alt="Control DualShock 4 PS4 - Vista lateral">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/placeholder.svg?height=400&width=400" class="d-block w-100" alt="Control DualShock 4 PS4 - Vista trasera">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <img src="/placeholder.svg?height=100&width=100" class="img-thumbnail thumbnail" alt="Control DualShock 4 PS4 - Vista frontal" onclick="changeImage(0)">
+                    </div>
+                    <div class="col-4">
+                        <img src="/placeholder.svg?height=100&width=100" class="img-thumbnail thumbnail" alt="Control DualShock 4 PS4 - Vista lateral" onclick="changeImage(1)">
+                    </div>
+                    <div class="col-4">
+                        <img src="/placeholder.svg?height=100&width=100" class="img-thumbnail thumbnail" alt="Control DualShock 4 PS4 - Vista trasera" onclick="changeImage(2)">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1 class="mb-3">Control DualShock 4 PS4</h1>
+                <div class="mb-3">
+                    <span class="star-filled">★★★★</span><span class="star-empty">★</span>
+                    <span class="text-muted">(128 reseñas)</span>
+                </div>
+                <p class="product-price mb-3">$59.99</p>
+                <p class="text-success mb-3">
+                    <i class="bi bi-check-circle-fill"></i> En stock
+                </p>
+                <p class="mb-4">Experimenta el control mejorado y la comodidad del nuevo control PS4, con un diseño elegante, botones sensibles y palancas analógicas mejoradas para un control preciso.</p>
+                <div class="mb-4">
+                    <label for="quantity" class="form-label">Cantidad:</label>
+                    <select class="form-select" id="quantity" style="width: auto;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary btn-lg mb-4" onclick="addToCart()">
+                    <i class="bi bi-cart-plus"></i> Añadir al Carrito
+                </button>
+                <h2 class="h4 mb-3">Características Principales</h2>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-check text-success"></i> Diseño ergonómico para sesiones de juego cómodas y prolongadas</li>
+                    <li><i class="bi bi-check text-success"></i> Control preciso con palancas analógicas y botones sensibles</li>
+                    <li><i class="bi bi-check text-success"></i> Batería recargable incorporada</li>
+                    <li><i class="bi bi-check text-success"></i> Barra de luz integrada para inmersión en el juego</li>
+                    <li><i class="bi bi-check text-success"></i> Panel táctil multitáctil con clic</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="mb-4">Opiniones de Clientes</h2>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">¡Excelente control!</h5>
+                        <div class="mb-2">
+                            <span class="star-filled">★★★★★</span>
+                        </div>
+                        <p class="card-text">Este control de PS4 es increíble. La calidad de construcción es excelente y se siente genial en mis manos. ¡Altamente recomendado!</p>
+                        <p class="card-text"><small class="text-muted">Por Juan Pérez - 15 de marzo, 2024</small></p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Buen rendimiento, pero la batería podría mejorar</h5>
+                        <div class="mb-2">
+                            <span class="star-filled">★★★★</span><span class="star-empty">★</span>
+                        </div>
+                        <p class="card-text">He estado usando este control durante unos meses. Es sensible y cómodo. La duración de la batería podría ser mejor, pero en general, es un buen producto.</p>
+                        <p class="card-text"><small class="text-muted">Por María García - 2 de abril, 2024</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light mt-5 py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 TechShop. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let cartCount = 0;
+
+        function changeImage(index) {
+            const carousel = new bootstrap.Carousel(document.getElementById('productCarousel'));
+            carousel.to(index);
+        }
+
+        function addToCart() {
+            const quantity = parseInt(document.getElementById('quantity').value);
+            cartCount += quantity;
+            document.getElementById('cartCount').textContent = cartCount;
+            
+            showNotification(`${quantity} Control(es) DualShock 4 PS4 añadido(s) al carrito`);
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.position = 'fixed';
+            notification.style.top = '20px';
+            notification.style.right = '20px';
+            notification.style.backgroundColor = '#007bff';
+            notification.style.color = 'white';
+            notification.style.padding = '10px';
+            notification.style.borderRadius = '5px';
+            notification.style.zIndex = '1000';
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+    </script>
+    <script src="../scripts/productspages.js"></script>
+</body>
+</html>

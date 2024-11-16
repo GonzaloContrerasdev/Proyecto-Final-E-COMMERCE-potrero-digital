@@ -2,6 +2,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "cloudinary": "^2.5.1",
     "get-google-fonts": "^1.2.2",

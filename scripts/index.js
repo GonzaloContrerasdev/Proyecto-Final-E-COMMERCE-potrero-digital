@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('Error al inicializar el toast:', error);
   }
 
-  const productImages = document.querySelectorAll('.image-product');
+  const productImages = document.querySelectorAll('.image-zoom');
   
   productImages.forEach(img => {
     img.classList.add('zoom-image');
