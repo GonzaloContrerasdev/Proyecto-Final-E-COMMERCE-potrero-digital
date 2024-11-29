@@ -84,3 +84,53 @@ document.addEventListener('DOMContentLoaded', () => {
         new bootstrap.Modal(document.getElementById('cartModal')).hide();
     });
 });
+
+function addToCartWithQuantity(button) {
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const id = button.getAttribute('data-id');
+    const name = button.getAttribute('data-name');
+    const price = parseFloat(button.getAttribute('data-price'));
+    
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Buscar si el producto ya existe en el carrito
+    const existingItem = cart.find(item => item.id === id);
+    
+    if (existingItem) {
+        // Si existe, actualizar cantidad
+        existingItem.quantity += quantity;
+    } else {
+        // Si no existe, agregar nuevo item
+        cart.push({
+            id: id,
+            name: name,
+            price: price,
+            quantity: quantity
+        });
+    }
+    
+    // Guardar carrito actualizado
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Actualizar contador del carrito
+    updateCartCount();
+    
+    // Mostrar mensaje de confirmación
+    showAlert('success', `Se agregaron ${quantity} unidad(es) al carrito`);
+}
+
+function showAlert(type, message) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `alert alert-${type} alert-dismissible fade show position-fixed top-0 end-0 m-3`;
+    alertDiv.setAttribute('role', 'alert');
+    alertDiv.innerHTML = `
+        ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    `;
+    document.body.appendChild(alertDiv);
+    
+    // Eliminar alerta después de 3 segundos
+    setTimeout(() => {
+        alertDiv.remove();
+    }, 3000);
+}

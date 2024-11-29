@@ -6,6 +6,7 @@
     "bootstrap": "^5.3.3",
     "cloudinary": "^2.5.1",
     "get-google-fonts": "^1.2.2",
+    "jquery-zoom": "^1.7.21",
     "node": "^22.10.0",
     "webfontloader": "^1.6.28"
   }

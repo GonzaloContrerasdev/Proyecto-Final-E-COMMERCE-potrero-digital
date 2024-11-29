@@ -6,14 +6,53 @@
 }
 .thumbnail {
     cursor: pointer;
-    transition: opacity 0.2s;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
 }
+
+.thumbnail.active {
+    border-color: #0d6efd;
+    opacity: 1;
+}
+
+.thumbnail:not(.active) {
+    opacity: 0.6;
+}
+
 .thumbnail:hover {
-    opacity: 0.7;
+    opacity: 1;
 }
 .product-price {
     font-size: 2rem;
     font-weight: bold;
     color: #007bff;
 }
+.zoom-container {
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+}
 
+.zoom-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.zoomImg {
+    background-color: #fff;
+}
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out !important;
+}
+
+
+
+.carousel-item.video-item.active ~ .carousel-control-prev,
+.carousel-item.video-item.active ~ .carousel-control-next {
+    display: none !important;
+}
+
+.alert {
+    z-index: 1050;
+}

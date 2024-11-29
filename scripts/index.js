@@ -1,5 +1,4 @@
 console.log('DOM Cargado');
-console.log('Bootstrap disponible:', typeof bootstrap !== 'undefined');
 console.log('Elemento toast:', document.getElementById('welcomeToast'));
 
 document.addEventListener('DOMContentLoaded', () => {
