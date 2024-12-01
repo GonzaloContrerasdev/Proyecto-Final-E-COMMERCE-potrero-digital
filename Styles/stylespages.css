@@ -39,14 +39,13 @@
 }
 
 .zoomImg {
-    background-color: #fff;
+    background-color: #df1d1d;
 }
 
 .carousel-item {
     transition: transform 0.6s ease-in-out !important;
+    height: 500px; /* Misma altura que el contenedor */
 }
-
-
 
 .carousel-item.video-item.active ~ .carousel-control-prev,
 .carousel-item.video-item.active ~ .carousel-control-next {
@@ -55,4 +54,22 @@
 
 .alert {
     z-index: 1050;
+}
+
+/* Agregar al archivo CSS */
+.image-container {
+    width: 100%;
+    height: 500px; /* Altura fija del contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
