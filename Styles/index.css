@@ -22,7 +22,9 @@
   --bs-headerhover-color: #236fbb;
   --burguer-color: #ffffff;
   --burguer-bg-color: #000000;
+  --bs-h5-color-footer: #ffffff;
 }
+
 
 :root[data-bs-theme="dark"] {
     --bs-body-color: #ced4da;
@@ -94,7 +96,9 @@
     --bs-headerhover-color: #985de0;
     --burguer-color: #000000;
     --burguer-bg-color: #ffffff;
-  }
+    --bs-h5-color-footer: #ffffff;
+}
+  
 
 
 :root[data-bs-theme="arcade"]{
@@ -122,7 +126,9 @@
   --bs-headerhover-color: #cbfb49;
   --burguer-color: #ffffff;
   --burguer-bg-color: #000000;
+  --bs-h5-color-footer: #ffffff;
 }
+
 
 
 :root[data-bs-theme="solar"]{
@@ -137,6 +143,7 @@
   --bs-tertiary-bg: #2b3035;
   --bs-p-color: #686868;
   --bs-hgfade-color: #3b3a34;
+  --bs-h5-color-footer: #ffffff;
 }
 *{
   scroll-behavior: smooth;
@@ -154,6 +161,9 @@ header{
 
 footer{
   background-color: var(--bs-tertiary-bg);
+}
+footer h5{
+  color: var(--bs-h5-color-footer);
 }
   .cartaproducto {
     position: relative;

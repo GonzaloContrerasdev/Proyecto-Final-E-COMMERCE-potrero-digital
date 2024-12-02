@@ -7,23 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentFilter = 'all';
     let currentSort = '';
 
-    // Función combinada de filtrado y ordenamiento
+
     function filterAndSortProducts() {
         const products = Array.from(document.querySelectorAll('.product-card'));
         
-        // Primero filtramos
+
         products.forEach(product => {
             const productCol = product.closest('.col');
             const shouldShow = currentFilter === 'all' || product.dataset.category === currentFilter;
             productCol.style.display = shouldShow ? '' : 'none';
         });
 
-        // Luego ordenamos los productos visibles
         const visibleProducts = products.filter(product => 
             product.closest('.col').style.display !== 'none'
         );
 
-        // Aplicar ordenamiento
         if (currentSort) {
             visibleProducts.sort((a, b) => {
                 const getPriceValue = elem => parseFloat(elem.querySelector('.fw-bold').textContent.replace('$', ''));
@@ -41,14 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Reordenar en el DOM
+
             visibleProducts.forEach(product => {
                 productsContainer.appendChild(product.closest('.col'));
             });
         }
     }
 
-    // Event listeners
+
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             currentFilter = button.dataset.filter;
@@ -63,6 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
         filterAndSortProducts();
     });
 
-    // Inicialización
+
     filterAndSortProducts();
 });

@@ -3,18 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
         keyboard: false
     });
 
-    // Obtener todos los elementos que cierran el modal
-    // biome-ignore lint/style/noVar: <explanation>
+
         var closeButtons = document.querySelectorAll('[data-bs-dismiss="modal"]');
 
-    // Agregar evento de clic a cada botón de cierre
+
     closeButtons.forEach(function(button) {
         button.addEventListener('click', function() {
             myModal.hide();
         });
     });
 
-    // Opcional: Si tienes un botón para abrir el modal, puedes usar esto:
+
     var openModalBtn = document.getElementById('openCartModal');
     if (openModalBtn) {
         openModalBtn.addEventListener('click', function() {
@@ -70,7 +69,7 @@ function showCart() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // ... código anterior ...
+
 
     document.getElementById('cart-button').addEventListener('click', () => {
         showCart();
@@ -93,14 +92,14 @@ function addToCartWithQuantity(button) {
     
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
-    // Buscar si el producto ya existe en el carrito
+
     const existingItem = cart.find(item => item.id === id);
     
     if (existingItem) {
-        // Si existe, actualizar cantidad
+
         existingItem.quantity += quantity;
     } else {
-        // Si no existe, agregar nuevo item
+
         cart.push({
             id: id,
             name: name,
@@ -109,13 +108,13 @@ function addToCartWithQuantity(button) {
         });
     }
     
-    // Guardar carrito actualizado
+
     localStorage.setItem('cart', JSON.stringify(cart));
     
-    // Actualizar contador del carrito
+
     updateCartCount();
     
-    // Mostrar mensaje de confirmación
+
     showAlert('success', `Se agregaron ${quantity} unidad(es) al carrito`);
 }
 
@@ -129,7 +128,7 @@ function showAlert(type, message) {
     `;
     document.body.appendChild(alertDiv);
     
-    // Eliminar alerta después de 3 segundos
+
     setTimeout(() => {
         alertDiv.remove();
     }, 3000);
